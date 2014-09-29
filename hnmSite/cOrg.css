@@ -1,0 +1,149 @@
+/*========================
+　基本設定
+========================*/
+
+/*看板*/
+div#tkanban{background:url(./img/tkanbanOrg.jpg) #c60;}
+div#kanban{background:url(./img/kanbanOrg.jpg) #c60;}
+
+/*文字色*/
+*{color:#fff;}
+input{color:#000;}
+#coment dl dt{color:#c60;}
+
+#coment h3,
+#coment h4,
+#coment h5,
+#coment h6{
+	color:#c60;
+	border-bottom-color:#ffaa33;
+}
+
+/*背景色*/
+div#toiawase .formfield,
+div#toiawase .formbutton{
+	background-color: #fff;
+}
+#coment h3{background-color:#0f0f0f;}
+
+/*リンク色*/
+a{color:#ccf;}
+a:hover{color:#c00;}
+
+/*パン屑リストの文字色*/
+p#panKuz{color:#dedede;}
+
+/*文字などの境界線*/
+div#aside dl,
+div#sita dl dt{
+	border-left-color:#999;
+}
+div#aside dl,
+div#sita dl dt,
+div#sita dl dd{
+	border-right-color:#999;
+}
+div#aside dl,
+div#aside dl dd a{
+	border-bottom-color:#999;
+}
+
+/*エンボス処理*/
+div#ueNabi dl dt a,
+div#ueNabi dl dd a,
+div#toiawase .formbutton{
+	border-top-color:#fc9;
+	border-left-color:#fc9;
+	border-bottom-color:#c96;
+	border-right-color:#c96;
+}
+div#ueNabi dl dt a:hover,
+div#ueNabi dl dd a:hover,
+div#toiawase .formfield{
+	border-top-color:#963;
+	border-left-color:#963;
+	border-bottom-color:#c96;
+	border-right-color:#c96;
+}
+
+/*========================
+　個別設定
+========================*/
+
+/*ボディー*/
+body{
+	background:#333;
+}
+
+div#atama{
+	border-top-color:#c60;
+}
+div#body {
+	background-color:#121212;
+	border-right-color:#000;
+	border-left-color:#000;
+	border-bottom-color:#c60;
+}
+div#content h2{
+	border-bottom-color: #666;
+	color:#dedede;
+}
+div#content div#toiawase h3{
+	border-bottom-color: #666;
+	color:#c60;
+}
+
+/*ヘッダー*/
+div#atama {	background:#121212;}
+div#atama h1,div#atama h1 a{color:#fff;}
+
+/*トップナビ*/
+div#ueNabi dl{border-bottom-color:#000;}
+
+div#ueNabi dl,
+div#ueNabi dl dt,
+div#ueNabi dl dd{
+	background-color:#000;
+}
+div#ueNabi dl dt a,
+div#ueNabi dl dd a{
+	background-color:#ffaa33;
+	color:#333;
+}
+div#ueNabi dl dt a:hover,
+div#ueNabi dl dd a:hover{
+	background-color:#cc7700;
+	color:#fc3;
+}
+
+/*アサイド*/
+div#aside dl{background:#efefef;}
+div#aside dl a{color:#039;}
+div#aside dl a:hover{background-color:#fff;}
+div#aside dl dt,div#aside dl dt a{color:#fff;}
+div#aside dl dt a{background-color:#c60;}
+div#aside dl dt a:hover{background-color:#dd7711;}
+div#aside dl dt a:hover{color:#fefefe;}
+
+/*フッター*/
+div#sita dl{
+	background:none #000;
+	border-top-color:#333;
+	border-bottom-color:#333;
+}
+address{
+	background:#121212;
+	margin-bottom:0px;
+	padding-bottom:10px;
+	color:#999;
+}
+
+/*ニュース*/
+
+div#content div#news{border-bottom-color:#fff;}
+div#content div#news dt{color:#c60;}
+div#content div#news h2,div#news dl{border-bottom-color:#fff;}
+div#content div#newsSita{border-top-color:#fff;}
+
+div#news h3{background-color:#c60;}
+div#news h3{color:#fff;}

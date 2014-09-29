@@ -1,0 +1,105 @@
+/*========================
+　基本設定
+========================*/
+
+/*看板*/
+div#tkanban{background:url(./img/tkanban.jpg) #dedede;}
+div#kanban{background:url(./img/kanban.jpg) #dedede;}
+
+/*文字色*/
+*{color:#333;}
+input{color:#333;}
+
+
+/*リンク色*/
+a{color:#666;}
+a:hover{color:#000;}
+
+/*背景画像*/
+body {background:url(./img/bodyBk.gif) repeat-x #dedede;}
+div#sita dl{background:url(./img/obiBk.gif) repeat-x 0px -50px #efefef;}
+div#atama {background:url(./img/obiBk.gif) repeat-x 0px -50px #efefef;}
+
+/*エンボス処理*/
+div#ueNabi dl dt a,div#ueNabi dl dd a,div#toiawase .formbutton{
+	border-top-color:#ccc;
+	border-left-color:#ccc;
+	border-bottom-color:#999;
+	border-right-color:#999;
+}
+div#ueNabi dl dt a:hover,div#ueNabi dl dd a:hover,div#toiawase .formfield{
+	border-top-color:#999;
+	border-left-color:#999;
+	border-bottom-color:#cccc;
+	border-right-color:#ccc;
+}
+
+/*クロ*/
+div#atama h1,div#atama h1 a,div#news dt{
+	color:#000;
+}
+div#content h2,div#news,div#toiawase h3{
+	border-bottom-color:#000;
+}
+
+/*666*/
+p#panKuz{
+	color:#666;
+}
+div#aside dl dt a,div#news h3,div#ueNabi dl dt a:hover,div#ueNabi dl dd a:hover{
+	background-color:#666;
+}
+div#atama,div#news #newsSita{
+	border-top-color:#666;
+}
+div#content div#news h2,div#news dl,div#body{
+	border-bottom-color:#666;
+}
+
+/*999*/
+div#aside dl dt a:hover{
+	background-color:#999;
+}
+#aside dl,
+div#sita dl dt{
+	border-left-color:#999;
+}
+div#aside dl,div#sita dl dt,div#sita dl dd{
+	border-right-color:#999;
+}
+div#aside dl,div#aside dl dd a{
+	border-bottom-color:#999;
+}
+
+/*ccc*/
+div#news h3,#aside dl dt,#aside dl dt a{
+	color:#ccc;
+}
+div#ueNabi dl,div#ueNabi dl dt,div#ueNabi dl dd{
+	background-color:#ccc;
+}
+div#ueNabi dl{
+	border-bottom-color:#ccc;
+}
+div#sita dl{
+	border-top-color:#ccc;
+	border-bottom-color:#ccc;
+}
+div#body {
+	border-right-color:#ccc;
+	border-left-color:#ccc;
+}
+
+/*うすいグレー*/
+div#atama,div#sita dl,div#aside dl a:hover,div#ueNabi dl dt a,div#ueNabi dl dd a{
+	background-color:#efefef;
+}
+
+/*シロ*/
+#aside dl dt a:hover{
+	color:#fff;
+}
+div#kanban,div#body,div#aside dl,div#toiawase .formfield,div#toiawase .formbutton{
+	background-color: #fff;
+}
+

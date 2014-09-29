@@ -1,0 +1,382 @@
+<nucleusskin>
+	<meta>
+		<skin name="hnmSite" />
+		<template name="hnmN01" />
+		<template name="hnmM01" />
+		<template name="hnmi01" />
+	</meta>
+
+
+	<skin name="hnmSite" type="text/html" includeMode="skindir" includePrefix="hnmSite/">
+		<description>はなまるスキン for Site</description>
+		<part name="imagepopup"><![CDATA[
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title><%imagetext%></title>
+<style type="text/css">
+img { border: none; }
+body { margin: 0px; }
+</style>
+</head>
+<!-- image content -->
+<body onblur="window.close()"><a href="javascript:window.close();">
+<%image%>
+</a>
+</body>
+</html>
+]]></part>
+
+		<part name="index"><![CDATA[<?xml version="1.0" encoding="euc-jp"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-JP" lang="ja-JP">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="generator" content="<%version%>" />
+<meta name="name" content="<%blogsetting(name)%>" />
+<meta name="description" content="<%blogsetting(desc)%>" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta http-equiv="Expires" content="-1" />
+
+<link rev="made" href="mailto:<%sitevar(admin)%>" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="xml-rss2.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="rsd.php" />
+
+<link rel="stylesheet" type="text/css" href="<%skinfile(base.css)%>" />
+<%if(category)%>
+<title><%category(desc)%>:<%blogsetting(name)%></title>
+<link rel="stylesheet" type="text/css" href="<%skinfile(page.css)%>" />
+
+<%else%><title><%blogsetting(name)%><%blogsetting(desc)%></title>
+<link rel="stylesheet" type="text/css" href="<%skinfile(top.css)%>" /><%endif%>
+
+<link rel="stylesheet" type="text/css" href="<%skinfile(design.css)%>" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="<%skinfile(ie6.css)%>"><![endif]-->
+<%hnmTopitem(css)%>
+</head>
+<%if(category)%><body id="b<%blogsetting(id)%>c<%category(id)%>">
+<%else%><body id="b<%blogsetting(id)%>c0">
+<%endif%><div id="body">
+
+<div id="atama">
+<h1><a href="<%blogsetting(url)%>" title="<%blogsetting(desc)%>"><%blogsetting(name)%></a></h1>
+<%searchform%>
+<p class="desc"><%blogsetting(desc)%></p>
+</div>
+<%if(category)%><!--通常ページの看板エリア-->
+<div id="kanban">
+<%hnmTopitem(kbn)%>
+
+<%else%><!--トップページの看板エリア-->
+<div id="tkanban">
+<%hnmTopitem(kbn)%>
+
+<%endif%></div>
+
+<div id="ueNabi"<%hnmTopitem(catCount)%>>
+<%categorylist(hnmM01)%>
+<a name="navi" class="crL"></a>
+</div>
+
+<%if(category)%><p id="panKuz">
+<a href="<%self%>">ホーム</a>&nbsp;&gt;&nbsp;<%category(name)%>
+</p>
+
+<div id ="aside">
+<%hnmTopitem(nabiUe)%>
+<dl><!--サイドバー　スタート-->
+<dt><a href="<%self%>?catid=<%category(id)%>&amp;blogid=<%blogsetting(id)%>"><%category(name)%></a></dt>
+<%blog(hnmM01,50)%></dl><!--サイドバー　おわり-->
+<%hnmTopitem(nabiSita)%>
+</div>
+
+<div id="content">
+<h2><%category(name)%></h2>
+
+<div id="coment"><!--カテゴリトップページアイテム　スタート-->
+<%hnmTopitem%>
+</div><!--カテゴリトップページアイテム　おわり-->
+
+<!--カテゴリトップページニュース　スタート-->
+<div id="news">
+<h3><%category(name)%>:新着ニュース</h3>
+<%blog(hnmN01,5)%>
+</div>
+<!--カテゴリトップページニュース　おわり-->
+</div>
+
+<%else%><div id="content">
+
+<div id="news"><!--トップページニュース　スタート-->
+<%hnmTopitem(newsUe)%>
+<h2>新着ニュース</h2>
+<%blog(hnmN01,5)%>
+<%hnmTopitem(newsSita)%>
+</div><!--トップページニュース　おわり-->
+
+<!--トップページアイテム　スタート-->
+<div id="coment">
+<%hnmTopitem%>
+</div>
+<!--トップページアイテム　おわり-->
+
+</div><%endif%>
+
+<!--フッタメニュー　スタート-->
+<div id="sita">
+<%categorylist(hnmM01)%></div>
+<!--フッタメニュー　おわり-->
+
+<address><!--コピーライト　スタート-->
+<!--コピーライトを変更する場合はココを変更
+Copyright:hanamachi-Ya!
+<br />
+-->
+<%categorylist(hnmi01)%><!--削除しないでください-->
+</address><!--コピーライト　おわり-->
+
+<%hnmTopitem(banabana)%>
+</div>
+</body>
+</html>]]></part>
+
+		<part name="item"><![CDATA[<?xml version="1.0" encoding="euc-jp"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-JP" lang="ja-JP">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="generator" content="<%version%>" />
+<meta name="name" content="<%blogsetting(name)%>" />
+<meta name="description" content="<%blogsetting(desc)%>" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta http-equiv="Expires" content="-1" />
+
+<link rev="made" href="mailto:<%sitevar(admin)%>" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="xml-rss2.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="rsd.php" />
+
+<link rel="stylesheet" type="text/css" href="<%skinfile(base.css)%>" />
+<link rel="stylesheet" type="text/css" href="<%skinfile(page.css)%>" />
+<link rel="stylesheet" type="text/css" href="<%skinfile(design.css)%>" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="<%skinfile(ie6.css)%>"><![endif]-->
+
+<%hnmTopitem(css)%>
+
+<title><%itemtitle%>:<%blogsetting(name)%></title>
+
+</head>
+<body id="b<%blogsetting(id)%>c<%category(id)%>">
+<div id="body">
+
+<div id="atama">
+<h1><a href="<%blogsetting(url)%>" title="<%blogsetting(desc)%>"><%blogsetting(name)%></a></h1>
+<%searchform%>
+<p class="desc"><%blogsetting(desc)%></p>
+</div>
+
+<div id="kanban"><!--通常ページの看板エリア-->
+<%hnmTopitem(kbn)%>
+
+</div>
+
+<div id="ueNabi"<%hnmTopitem(catCount)%>>
+<%categorylist(hnmM01)%>
+<a name="navi" class="crL"></a>
+</div>
+
+<p id="panKuz">
+<a href="<%self%>">ホーム</a>&nbsp;&gt;&nbsp;
+<a href="<%self%>?blogid=<%blogsetting(id)%>&amp;catid=<%category(id)%>"><%category(name)%></a>&nbsp;&gt;&nbsp;
+<%itemtitle%>
+</p>
+
+<div id="aside">
+<%hnmTopitem(nabiUe)%>
+<dl><!--サイドバー　スタート-->
+<dt><a href="<%self%>?catid=<%category(id)%>&amp;blogid=<%blogsetting(id)%>"><%category(name)%></a></dt>
+<%blog(hnmM01,50)%></dl><!--サイドバー　おわり-->
+<%hnmTopitem(nabiSita)%>
+</div>
+
+<div id="content">
+
+<%item(hnmi01)%>
+
+<div id="navLink">
+<p class="txtL"><%if(nextitem)%>&lt;&lt;&nbsp;<span>前へ&nbsp;[<a href="<%nextlink%>"><%nextitemtitle%></a>]<%endif%>&nbsp;</span></p>
+<p class="txtR">&nbsp;<%if(previtem)%><span>[<a href="<%prevlink%>"><%previtemtitle%></a>]&nbsp;次へ</span>&nbsp;&gt;&gt;<%endif%></p>
+<br />
+</div>
+
+<div id="toiawase">
+<h3>「<%itemtitle%>」についてのお問合せ</h3>
+<%commentform%></div>
+</div>
+
+<!--フッタメニュー　スタート-->
+<div id="sita">
+<%categorylist(hnmM01)%></div>
+<!--フッタメニュー　おわり-->
+
+<address><!--コピーライト　スタート-->
+<!--コピーライトを変更する場合はココを変更
+Copyright:hanamachi-Ya!
+<br />
+-->
+<%categorylist(hnmi01)%><!--削除しないでください-->
+</address><!--コピーライト　おわり-->
+
+<%hnmTopitem(banabana)%>
+</div></body>
+</html>]]></part>
+
+		<part name="search"><![CDATA[<?xml version="1.0" encoding="euc-jp"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-JP" lang="ja-JP">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="generator" content="<%version%>" />
+<meta name="name" content="<%blogsetting(name)%>" />
+<meta name="description" content="<%blogsetting(desc)%>" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta http-equiv="Expires" content="-1" />
+
+<link rev="made" href="mailto:<%sitevar(admin)%>" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="xml-rss2.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="rsd.php" />
+
+<link rel="stylesheet" type="text/css" href="<%skinfile(base.css)%>" />
+<link rel="stylesheet" type="text/css" href="<%skinfile(page.css)%>" />
+<link rel="stylesheet" type="text/css" href="<%skinfile(design.css)%>" />
+<!--[if IE]><link rel="stylesheet" type="text/css" href="<%skinfile(ie6.css)%>"><![endif]-->
+
+<title><%blogsetting(name)%></title>
+
+</head>
+<body id="b<%blogsetting(id)%>c<%category(id)%>">
+<div id="body">
+
+<div id="atama">
+<h1><a href="<%blogsetting(url)%>" title="<%blogsetting(desc)%>"><%blogsetting(name)%></a></h1>
+<%searchform%>
+<p class="desc"><%blogsetting(desc)%></p>
+</div>
+
+<div id="kanban"><!--通常ページの看板エリア-->
+<%hnmTopitem(kbn)%>
+
+</div>
+
+<div id="ueNabi"<%hnmTopitem(catCount)%>>
+<%categorylist(hnmM01)%>
+<a name="navi" class="crL"></a>
+</div>
+
+<p id="panKuz">
+<a href="<%self%>">ホーム</a>&nbsp;&gt;&nbsp;[<%query%>]の検索結果
+</p>
+
+<div id="aside">
+<%hnmTopitem(nabiUe)%>
+</div>
+
+<div id="content">
+
+<!--カテゴリトップページニュース　スタート-->
+<div id="news">
+<h3>[<%query%>]の検索結果</h3>
+<%searchresults(hnmn01)%>
+</div>
+<!--カテゴリトップページニュース　おわり-->
+
+
+<!--フッタメニュー　スタート-->
+<div id="sita">
+<%categorylist(hnmM01)%></div>
+<!--フッタメニュー　おわり-->
+
+<address><!--コピーライト　スタート-->
+<!--コピーライトを変更する場合はココを変更
+Copyright:hanamachi-Ya!
+<br />
+-->
+<%categorylist(hnmi01)%><!--削除しないでください-->
+</address><!--コピーライト　おわり-->
+
+<%hnmTopitem(banabana)%>
+</div></body>
+</html>]]></part>
+
+	</skin>
+
+
+	<template name="hnmN01">
+		<description>はなまるスキンの新着情報</description>
+		<part name="FORMAT_DATE"><![CDATA[%Y年%m月%d日]]></part>
+
+		<part name="ITEM"><![CDATA[<dt><%date%><br /><a href="<%itemlink%>&amp;catid=<%catid%>"><%title%></a></dt>
+<dd><%syndicate_description(160)%><a href="<%itemlink%>">つづき&gt;&gt;</a></dd>
+]]></part>
+
+		<part name="ITEM_FOOTER"><![CDATA[</dl>
+]]></part>
+
+		<part name="ITEM_HEADER"><![CDATA[<dl>
+]]></part>
+
+	</template>
+
+
+	<template name="hnmM01">
+		<description>はなまるスキンのメニュー</description>
+		<part name="CATLIST_FOOTER"><![CDATA[</dl>]]></part>
+
+		<part name="CATLIST_HEADER"><![CDATA[<dl>
+<dt><a href="<%blogurl%>">ホーム</a></dt>
+]]></part>
+
+		<part name="CATLIST_LISTITEM"><![CDATA[<dd><a href="<%catlink%>" title="<%catdesc%>"><%catname%></a></dd>
+]]></part>
+
+		<part name="ITEM"><![CDATA[<dd><a href="<%itemlink%>" title="<%title%>"><%title%></a></dd>
+]]></part>
+
+	</template>
+
+
+	<template name="hnmi01">
+		<description>はなまるスキンのアイテム用</description>
+		<part name="CATLIST_HEADER"><![CDATA[Powered by 
+| <a href="http://nucleuscms.org">nucleus</a>
+| <a href="http://hanamachi.com">hanamachi-Ya!</a>
+]]></part>
+
+		<part name="EDITLINK"><![CDATA[<a href="<%editlink%>" onclick="<%editpopupcode%>" class="edit">編集</a>]]></part>
+
+		<part name="IMAGE_CODE"><![CDATA[<%image%>
+]]></part>
+
+		<part name="ITEM"><![CDATA[<%body%>
+<%more%>
+]]></part>
+
+		<part name="ITEM_FOOTER"><![CDATA[</div>]]></part>
+
+		<part name="ITEM_HEADER"><![CDATA[<p class="txtR"><%category(name)%></p>
+<h2 id="itemTitle"><%title%><%edit%></h2>
+<div id="coment">
+]]></part>
+
+		<part name="POPUP_CODE"><![CDATA[<%popuplink%>
+]]></part>
+
+	</template>
+
+
+</nucleusskin>

@@ -1,0 +1,177 @@
+div#kanban{
+	background-color:#eeeeee;
+	text-align:center;
+	width:820px;
+	height:80px;
+}
+
+p#panKuz{
+	clear:left;
+	margin:10px 0 0 10px;
+	color:#666;
+}
+
+div#aside {
+	margin:0px 0px 0px 10px ;
+	float: left;
+	width: 200px;
+}
+
+#aside dl {
+	margin:0px;
+	padding-bottom:10px;
+	border-left:1px #000 solid;	
+	border-right:1px #000 solid;
+	border-bottom:1px #000 solid;
+	overflow:hidden;
+}
+#aside dl dt,
+#aside dl dt a{
+	font-weight:bold;
+	color:#fff;
+}
+#aside dl dt a{
+	display:block;
+	background:#000;
+	padding:0px 0px 0px 2em;
+}
+#aside dl dt a:hover{
+	background:#333;
+	text-decoration:none;
+	color:#fff;
+}
+#aside dl dd a{
+	padding:0px 1em 0px 1em;
+	display:block;
+	font-size:8pt;
+	line-height:20px;
+	white-space:nowrap;
+	border-bottom:1px #000 dotted;
+	
+}
+#aside dl a:hover{
+	text-decoration:none;
+	background:#ccc;
+}
+#aside div#nabiUe{
+	margin:10px 0 20px 0;
+}
+#aside div#nabiSita{
+	margin:20px 0 0 0;
+}
+
+div#content{
+	margin:20px 10px 10px 240px;
+}
+div#content h2{
+	margin:0px 0px 20px 0px;
+	padding:0px 20px 0px 0px;
+	border-bottom: 1px solid #000;
+	text-align:right;
+	font-size:14pt;
+	font-weight:bold;
+	letter-spacing:0.2em;
+}
+div#content h2#itemTitle{
+	padding:0px;
+	text-align:left;
+	font-size:10pt;
+	font-weight:bold;
+	letter-spacing:0;
+}
+div#content h2#itemTitle a{
+	margin:0 0 0 10px;
+	font-weight:normal;
+	font-size:10pt;
+}
+
+div#content div#coment{
+	margin:0px 0px 20px 0px;
+	padding:0 10px;
+}
+
+div#news{
+	border-bottom:1px #000 solid;
+	padding-bottom:10px;
+
+}
+div#news h3{
+	font-size : 9pt;
+	color : #fff;
+	margin:0px 0px 10px 0px;
+	background-color: #000;
+	padding-left:2em;
+}
+div#news dl{
+	margin:0px 0px 20px 10px;
+	padding:0 0 4px 10px;
+	border-bottom: 1px dotted #000;
+}
+div#news dt{
+	color:#000;
+	font-weight:bold;
+}
+div#news dt a{
+	font-size : 9pt;
+	margin:0px 0px 0px 1em;
+}
+div#news dt a:hover{
+	text-decoration: underline;
+}
+div#news dd{
+	margin:0px 0px 0px 1em;
+}
+div#content div#toiawase{
+	clear:right;
+	margin-top:30px;
+}
+div#content div#toiawase h3{
+	text-align: left;
+	margin:0px 0px 10px 50px;
+	border-bottom:1px solid #000;
+	font-size:9pt;
+}
+div#content div#toiawase .commentform{
+	margin: 10px 0px 0px 100px;
+    padding: 10px;
+}
+div#toiawase .formfield{
+	display:block;
+	font-size: 11px;
+	background: white;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	margin: 1px 0 0 0;
+	display: block;
+}
+div#toiawase .formbutton{
+	font-size: 11px;
+	background: white;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+	margin: 1px 0 0 0;
+	display: block;
+}
+div#content div#toiawase #nucleus_cf_name,
+div#content div#toiawase #nucleus_cf_mail,
+div#content div#toiawase #nucleus_cf_email,
+div#content div#toiawase .commentform textarea,
+div#content div#toiawase .commentform .formfield{
+    width: 400px;
+    margin:0 0 10px 30px;
+}
+div#content div#toiawase .commentform textarea{
+    height: 80px;
+}
+div#content div#toiawase .commentform #nucleus_cf_remember{
+    margin:0 0 0 20px;
+}
+div#content div#toiawase .commentform .formbutton{
+	width: 100px;
+	height: 22px;
+	margin-left:200px;
+}

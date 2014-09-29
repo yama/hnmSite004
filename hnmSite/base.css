@@ -1,0 +1,236 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+	color:#333;
+}
+body {
+	font-size: 8pt;
+	line-height: 20px;
+	background:#fff;
+	text-align: center;
+}
+a{
+	color:#666;
+	text-decoration: none;
+}
+a:hover{
+	color:#000;
+	text-decoration:underline;
+}
+strong{
+	font-weight: bold;
+}
+div#body {
+	width: 820px;
+	margin: 0px auto;
+	text-align: left;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	border-bottom: 4px solid #000;
+}
+div#atama {
+	text-align:center;
+	border-top: 4px solid #000;
+	height:46px;
+	background:#ccc;
+}
+div#atama h1{
+	float:left;
+	margin:10px 0 0 10px;
+	height:37px;
+}
+
+div#atama h1,div#atama h1 a{
+	font-size: 12pt;
+	font-weight:bold;
+	color:#000;
+	letter-spacing:0.2em;
+	height:30px;
+}
+
+div#atama form{
+	float:right;
+	margin:5px 10px;
+}
+div#atama p{
+	margin:20px 0 0 0 ;
+	font-size:9pt;
+}
+
+div#ueNabi dl{
+	text-align:center;
+	clear:both;
+	height:20px;
+	background:#ccc;
+	border-bottom:4px #ccc solid;
+}
+
+div#ueNabi dl dt,div#ueNabi dl dd{
+	background:#ccc;
+	float:left;
+	list-style:none;
+}
+
+div#ueNabi dl dt{
+}
+
+div#ueNabi dl dt a,div#ueNabi dl dd a{
+	display:block;
+	background:#fff;
+	border:1px #000 solid;
+}
+div#ueNabi dl dt a:hover,div#ueNabi dl dd a:hover{
+	text-decoration: none;
+	color:#fff;
+	background:#000;
+	border:1px #ccc solid;
+}
+
+div.cCnt3 dl dt,
+div.cCnt3 dl dd{width:205px;}
+
+div.cCnt4 dl dt,
+div.cCnt4 dl dd{width:164px;}
+
+div.cCnt5 dl dt{width:135px;}
+div.cCnt5 dl dd{width:137px;}
+
+div.cCnt6 dl dt{width:112px;}
+div.cCnt6 dl dd{width:118px;}
+
+div.cCnt7 dl dt{width:99px;}
+div.cCnt7 dl dd{width:103px;}
+
+div.cCnt8 dl dt{width:84px;}
+div.cCnt8 dl dd{width:92px;}
+
+div#content {
+	margin:20px  10px 10px 10px;
+	line-height: 20px;	
+}
+
+div#sita{
+	padding:19px 0px 0px 0px;
+	clear:left;
+	text-align:center;
+}
+
+div#sita dl{
+	border-top:1px #ccc solid;
+	border-bottom:3px #ccc solid;
+	padding:2px 0px 3px 0px;
+}
+div#sita dl dt,div#sita dl dd{
+	display:inline;
+	list-style:none;
+	padding:2px 5px 2px 5px;
+	border-right:1px #ccc solid;
+}
+div#sita dl dt{
+	border-left:1px #ccc solid;
+}
+div#sita dl dt a,div#sita dl dd a{
+	font-size:7pt;
+}
+
+address {
+	text-align: center;
+	padding:5px 0px 0px 0px;
+	margin-bottom:10px;
+	font-style:normal;
+	font-size:7pt;
+}
+img{border:none;}
+
+
+#coment p,
+#coment ul,
+#coment dl,
+#coment ol{
+	margin:0 0 20px 10px;
+}
+
+#coment dl dt{
+	font-weight:bold;
+}
+
+#coment dl dd{
+	margin:0 0 20px 20px;
+}
+
+#coment ul li{
+	list-style-type:disc;
+	margin:0 0 0 20px;
+}
+
+#coment ol li{
+	list-style-type:decimal;
+	margin:0 0 0 20px;
+}
+
+#coment b{
+	font-weight:bold;
+}
+#coment h3,
+#coment h4,
+#coment h5,
+#coment h6{
+	font-weight:bold;
+	color:#000;
+	font-size:9pt;
+}
+#coment h3,
+#coment h4{
+	border-bottom:1px solid #666;
+	padding-left:10px;
+}
+#coment h3{
+	font-size:10pt;
+	background:#efefef;
+}
+#coment h4{margin-left:10px;}
+
+#coment .noList li{list-style-type:none;}
+
+#navLink p{
+width:50%;
+float:left;
+}
+#navLink span{
+text-decoration:underline;
+}
+#navLink br{
+clear:left;
+}
+
+.waku{border:1px #900 dotted;}
+.wakuro{
+	border-top:1px #ccc solid;
+	border-left:1px #ccc solid;
+	border-bottom:1px #999 solid;
+	border-right:1px #999 solid;
+	margin:5px;
+}
+
+.gyo1{margin-bottom:20px;}
+
+.dai{margin-right:10px;}
+
+.red{color:#c00;}
+strong.red{
+	background-color:#c00;
+	color:#fff;
+	padding:3px 5px;
+}
+
+.rightbox{float:right;}
+.leftbox{float:left;}
+
+.crL{clear:left;}
+.crR{clear:right;}
+.crB{clear:both;}
+
+.txtR{text-align:right;}
+.txtC{text-align:center;}
+.txtL{text-align:left;}
